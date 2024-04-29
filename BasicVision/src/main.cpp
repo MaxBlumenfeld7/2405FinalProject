@@ -20,9 +20,14 @@
 using namespace vex;
 
 // PID constants
-const double kP = 01; // Proportional constant
-const double kI = 0.01; // Integral constant
-const double kD = 0.05; // Derivative constant
+const double kPy = 0.75; // Proportional constant
+const double kIy = 0.01; // Integral constant
+const double kDy = 01; // Derivative constant
+
+const double kPx = 0.75; // Proportional constant
+const double kIx = 0.01; // Integral constant
+const double kDx = 01; // Derivative constant
+
 
 // Target positions for the object in the vision sensor's field of view
 const int yTarget = 120; // Target y-position, adjust based on sensor's resolution
@@ -57,9 +62,9 @@ int main() {
             xDerivative = xError - xPreviousError;
 
             // Compute the motor control signal (y-axis)
-            yOutput = kP * yError + kI * yIntegral + kD * yDerivative;
+            yOutput = kPy * yError + kIy * yIntegral + kDy * yDerivative;
             // Compute the motor control signal (x-axis)
-            xOutput = kP * xError + kI * xIntegral + kD * xDerivative;
+            xOutput = kPx * xError + kIx * xIntegral + kDx * xDerivative;
 
             // Set motor speed (y-axis)
             ymotor.spin(directionType::fwd, yOutput, velocityUnits::pct);
