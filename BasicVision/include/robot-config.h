@@ -6,8 +6,8 @@ using signature = vision::signature;
 
 // VEXcode devices
 extern signature Vision__SOLO_CUP;
-extern signature Vision__SIG_2;
-extern signature Vision__SIG_3;
+extern signature Vision__PAPER;
+extern signature Vision__PINK_PAPER;
 extern signature Vision__SIG_4;
 extern signature Vision__SIG_5;
 extern signature Vision__SIG_6;
