@@ -20,13 +20,13 @@
 using namespace vex;
 
 // PID constants
-const double kPy = 01; // Proportional constant
-const double kIy = 0.01; // Integral constant
-const double kDy = 01; // Derivative constant
+const double kPy = 0.85; // Proportional constant
+const double kIy = 0.02; // Integral constant
+const double kDy = 01.5; // Derivative constant
 
 const double kPx = 0.85; // Proportional constant
-const double kIx = 0.01; // Integral constant
-const double kDx = 01.1; // Derivative constant
+const double kIx = 0.02; // Integral constant
+const double kDx = 01.5; // Derivative constant
 
 
 // Target positions for the object in the vision sensor's field of view
@@ -43,7 +43,7 @@ int main() {
     double yOutput = 0, xOutput = 0;
 
     while(true) {
-        Vision.takeSnapshot(Vision__PINK_PAPER);
+        Vision.takeSnapshot(Vision__PURPLE1);
 
         if (Vision.largestObject.exists) {
             // Calculate the error from the center (y-axis)

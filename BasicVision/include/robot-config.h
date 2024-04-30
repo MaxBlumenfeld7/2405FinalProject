@@ -8,7 +8,7 @@ using signature = vision::signature;
 extern signature Vision__SOLO_CUP;
 extern signature Vision__PAPER;
 extern signature Vision__PINK_PAPER;
-extern signature Vision__SIG_4;
+extern signature Vision__PURPLE1;
 extern signature Vision__SIG_5;
 extern signature Vision__SIG_6;
 extern signature Vision__SIG_7;
